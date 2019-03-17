@@ -52,7 +52,8 @@ $ docker-machine create \
 
 Windows 10 安装 Docker for Windows 之后不能再安装 VirtualBox，也就不能使用 `virtualbox` 驱动来创建 Docker Machine，我们可以选择使用 `hyperv` 驱动。
 
-> 注意，必须事先在 `Hyper-V` 管理器中新建一个 **外部虚拟交换机** 执行下面的命令时，使用 `--hyperv-virtual-switch=MY_SWITCH` 指定虚拟交换机名称
+> 注意，必须事先在 `Hyper-V` 管理器中新建一个 **外部虚拟交换机** ，具体可以参考https://docs.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/connect-to-network
+执行下面的命令时，使用 `--hyperv-virtual-switch=MY_SWITCH` 指定虚拟交换机名称
 
 ```bash
 $ docker-machine create --driver hyperv --hyperv-virtual-switch=MY_SWITCH vm
